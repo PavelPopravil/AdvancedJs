@@ -59,23 +59,26 @@ gulp.task('scripts:base', function() {
 
 // Scripts libs
 gulp.task('scripts:libs', function() {
-  return gulp.src([])
+  return gulp.src([
+      ''
+  ])
     .pipe(concat('libs.min.js'))
-    .pipe(gulp.dest('app/js'));
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.stream());
 });
 
 // babel
-gulp.task('babel', function() {
-  return gulp.src('app/js/es6/*.js')
-    .pipe(babel({
-       presets: ['es2015', 'react']
-    }))
-    .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.stream())
-});
+// gulp.task('babel', function() {
+//   return gulp.src('app/js/es6/*.js')
+//     .pipe(babel({
+//        presets: ['es2015', 'react']
+//     }))
+//     .pipe(gulp.dest('app/js'))
+//     .pipe(browserSync.stream())
+// });
 
 // Scripts min
-gulp.task('scripts', ['babel', 'scripts:base', 'scripts:libs'], function() {
+gulp.task('scripts', ['scripts:base', 'scripts:libs'], function() {
     gulp.src(['app/js/*.js', '!app/js/*.min.js'])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
@@ -123,9 +126,10 @@ gulp.task('svgSpriteBuild', function () {
 // Watcher
 gulp.task('watch', ['browser-sync', 'minify', 'scripts', 'svgSpriteBuild'], function () {
   gulp.watch('app/sass/**/*.scss', ['minify']);
-  gulp.watch("app/*.html", browserSync.reload);
+  gulp.watch("app/**/*.html", browserSync.reload);
   gulp.watch("app/img/icons_svg/*.svg", ['svgSpriteBuild'], browserSync.reload);
-  gulp.watch("app/js/es6/*.js", ['scripts']);
+  gulp.watch("app/**/*.js", ['scripts']);
+  // gulp.watch("app/js/es6/*.js", ['scripts']);
   gulp.watch("app/js/*.js", browserSync.reload);
 });
 
