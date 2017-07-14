@@ -1,0 +1,28 @@
+{
+  "name": "AdvancedJs",
+  "version": "1.0.0",
+  "description": "courses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PavelPopravil",
+  "license": "ISC",
+  "devDependencies": {},
+  "homepage": "https://github.com/PavelPopravil/gulp-template",
+  "authors": [
+    "PavelPopravil <pasukmc@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap-sass": "*",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

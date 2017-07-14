@@ -1,0 +1,110 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-facebook__icon {
+  font-size: 3.75rem;
+  width: 1em; }
+
+.icon-github__icon {
+  font-size: 3.75rem;
+  width: 1em; }
+
+/* VARIABLES */
+/* CONNECT GOOGLE FONTS */
+/* CONNECT LOCAL FONTS */
+@font-face {
+  font-family: RobotoLight;
+  src: url("../fonts/RobotoLight/RobotoLight.woff2") format("woff2"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  /* height hack */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%; }
+
+body {
+  /* height hack */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* VERTICAL RYTHM */
+  /* SMOOTH FONT */
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+body.onload {
+  overflow: hidden; }
+
+button, select {
+  -webkit-appearance: none; }
+
+/* SELECT TEXT */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease; }
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* System */
+.np {
+  padding: 0; }
+
+/* no padding */
+.np-l {
+  padding-left: 0; }
+
+/* no padding left */
+.np-r {
+  padding-right: 0; }
+
+/* no padding right */
+.dp {
+  padding: 0 30px; }
+
+/* double padding */
+.nm {
+  margin: 0; }
+
+/* no margin */
+.nm-b {
+  margin-bottom: 0; }
+
+/* no margin bottom */
+.p_small {
+  padding: 5px; }
+
+/* BASE RESET */
+.navbar-default .navbar-toggle {
+  border: none; }
+
+/* HAPPY BROWSER */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
