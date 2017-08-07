@@ -179,4 +179,50 @@
     /* Ключевое слово typeOf, указывает на тип данных обхекта*/
     var test = 'hello';
     print(typeof test); // выведет string
+    
+    
+    // Practice
+    function Box(height, width, depth, material) {
+        this.height = height;
+        this.width = width;
+        this.depth = depth;
+        this.material = material;
+    }
+
+    Box.prototype.getV = function() {
+        return this.height * this.width * this.depth;
+    };
+
+    Box.prototype.equals = function (otherObj) {
+        if (this.width === otherObj.width && this.height === otherObj.height && this.depth === otherObj.depth && this.material === otherObj.material) {
+            return 'they are similar';
+        } else {
+            return 'they are different';
+        }
+    };
+
+    var box1 = new Box(100, 50, 20, 'wood');
+    var box2 = new Box(70, 150, 40, 'steel');
+    var box3 = new Box(100, 100, 35, 'paper');
+    var box4 = new Box(100, 100, 35, 'paper');
+
+    print(box1.getV());
+    print(box1.equals(box2));
+    print(box3.equals(box4));
+
+    // array sort
+    function Human(age, name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    Human.prototype.sortArray = function() {
+
+    };
+
+    var person1 = new Human(20, 'Oleg');
+    var person2 = new Human(22, 'Nadezda');
+    var person3 = new Human(54, 'Vasiliy');
+    var person4 = new Human(35, 'Sahsa');
+
 }();
