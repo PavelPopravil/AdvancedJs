@@ -225,4 +225,5 @@
     var person3 = new Human(54, 'Vasiliy');
     var person4 = new Human(35, 'Sahsa');
 
+//    https://stackoverflow.com/questions/42866809/push-to-array-from-constructor-in-plain-javascript
 }();
