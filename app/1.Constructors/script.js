@@ -211,19 +211,22 @@
     print(box3.equals(box4));
 
     // array sort
-    function Human(age, name) {
+    var humans = [];
+
+    var person1 = new Person(20, 'Oleg');
+    var person2 = new Person(22, 'Nadezda');
+    var person3 = new Person(54, 'Vasiliy');
+    var person4 = new Person(35, 'Sahsa');
+
+    function Person(age, name) {
         this.age = age;
         this.name = name;
+        humans.push(this);
     }
 
-    Human.prototype.sortArray = function() {
+    humans.sort(function(a, b) {
+        return b.age - a.age;
+    });
 
-    };
-
-    var person1 = new Human(20, 'Oleg');
-    var person2 = new Human(22, 'Nadezda');
-    var person3 = new Human(54, 'Vasiliy');
-    var person4 = new Human(35, 'Sahsa');
-
-//    https://stackoverflow.com/questions/42866809/push-to-array-from-constructor-in-plain-javascript
+    console.log(humans);
 }();
