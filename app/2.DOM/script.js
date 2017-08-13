@@ -46,3 +46,5 @@ function getPrevItem() {
 function resetColor() {
     child.css('color', '')
 }
+
+// 1.27
