@@ -4,5 +4,48 @@
 .preloader {}
 
 body {
-	
+  background-color: #eee;
+}
+
+$_controls-bg:            #0772A1;
+$_controls-color:         #fff;
+$_controls-hover:         #FFB700;
+
+.list {
+  @include list-reset;
+  margin-bottom: 20px;
+  width: 250px;
+  text-align: center;
+
+  li {
+    padding: 5px 10px;
+  }
+}
+
+.controls {
+  @include list-reset;
+  width: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &__item {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background: $_controls-bg;
+    border-bottom: 1px solid #fff;
+
+    &:hover {
+      border-bottom: 1px solid $_controls-hover;
+
+      a {
+        color: $_controls-hover;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    color: $_controls-color;
+  }
 }

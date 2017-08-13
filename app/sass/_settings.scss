@@ -1,11 +1,11 @@
-@import 'sprite';
+//@import 'sprite';
 /* VARIABLES */
 
 // fonts
-$main-font: ;
+//$main-font: ;
 
 // colors
-$main-color: ;
+//$main-color: ;
 /* CONNECT GOOGLE FONTS */
 
 /* CONNECT LOCAL FONTS */
@@ -21,6 +21,12 @@ $main-color: ;
 		font-weight: normal;
 		font-style: normal;
 	}
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // CONNECT LOCAL FONTS

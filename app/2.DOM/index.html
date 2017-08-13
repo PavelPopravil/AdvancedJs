@@ -6,9 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 
+    <ul class="list"><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
+
+    <ul class="controls">
+        <li class="controls__item"><a onclick="getFirstItem()" href="#">Выбрать первый элемент</a></li>
+        <li class="controls__item"><a onclick="getLastItem()" href="#">Выбрать последний элемент</a></li>
+        <li class="controls__item"><a onclick="getNextItem()" href="#">Выбрать следующий элемент</a></li>
+        <li class="controls__item"><a onclick="getPrevItem()" href="#">Выбрать предыдущий элемент</a></li>
+        <li class="controls__item"><a onclick="addItem()" href="#">Добавить элемент</a></li>
+        <li class="controls__item"><a onclick="deleteItem()" href="#">Удалить элемент</a></li>
+        <li class="controls__item"><a onclick="addBeginningItem()" href="#">Добавить элемент в начало</a></li>
+    </ul>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

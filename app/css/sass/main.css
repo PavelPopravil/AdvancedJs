@@ -99,34 +99,16 @@ body {
   background-color: #eee; }
 
 .list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 20px;
-  width: 250px;
-  text-align: center; }
-  .list li {
+  list-style: none; }
+  .list__item {
     padding: 5px 10px; }
 
 .controls {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 250px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 20px; }
+  list-style: none; }
   .controls__item {
+    display: inline-block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px 15px;
-    background: #0772A1;
-    border-bottom: 1px solid #fff; }
-    .controls__item:hover {
-      border-bottom: 1px solid #FFB700; }
-      .controls__item:hover a {
-        color: #FFB700; }
-  .controls a {
-    display: block;
-    color: #fff; }
+    background: #00b3ee;
+    color: #a94442; }

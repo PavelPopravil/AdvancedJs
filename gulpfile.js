@@ -31,7 +31,7 @@ gulp.task('sass', function () {
   return gulp.src('app/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-            browsers: ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+            browsers: ['last 15 versions', '> 1%'],
             cascade: false
         }))
     .pipe(gulp.dest('app/css'))
@@ -47,8 +47,7 @@ gulp.task('minify', ['sass'], function() {
 });
 
 // Scripts base
-var concat = require('gulp-concat');
- 
+
 gulp.task('scripts:base', function() {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js'
