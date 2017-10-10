@@ -44,4 +44,46 @@ document.addEventListener('DOMContentLoaded', function () {
     app.init();
 
     //    18 min
+
+    // Парсер строки запроса в URL
+    var app2 = {
+
+        getQuerySting: function () {
+            var args = {};
+            this.searchGet = document.location.search.substring(1);
+            this.searchItems = this.searchGet.split('&');
+
+            this.searchItems.forEach(function (item, i) {
+                var pos = item.indexOf('=');
+                if (pos === -1) {
+                    // continue;
+                }
+                var argument = item.substring(0, pos);
+                var value = item.substring(pos + 1);
+                args[argument] = value;
+            });
+
+            return args;
+        },
+
+        printParsedQuries: function () {
+            var args = this.getQuerySting();
+            var text = document.createElement('p');
+
+            for (var item in args) {
+                text.innerHTML +=
+                '<div>' + item + ': ' + args[item] + '</div>';
+            }
+            document.body.appendChild(text);
+        },
+
+        init: function () {
+            this.btn = document.querySelector('#showParseBtn');
+            this.btn.addEventListener('click', function () {
+                app2.printParsedQuries();
+            });
+        }
+    };
+
+    app2.init();
 });
