@@ -68,16 +68,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         printParsedQuries: function () {
             var args = this.getQuerySting();
-            var text = document.createElement('p');
-
+            this.textBlock.innerHTML = "";
             for (var item in args) {
-                text.innerHTML +=
+                this.textBlock.innerHTML +=
                 '<div>' + item + ': ' + args[item] + '</div>';
             }
-            document.body.appendChild(text);
         },
 
         init: function () {
+            this.block = document.querySelector('.app-2');
+            if (!this.block) {
+                return false;
+            }
+            this.textBlock = document.querySelector('#output');
             this.btn = document.querySelector('#showParseBtn');
             this.btn.addEventListener('click', function () {
                 app2.printParsedQuries();
@@ -86,4 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     app2.init();
+
+    // 31 min
 });
