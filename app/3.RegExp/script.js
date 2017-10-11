@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
         getQuerySting: function () {
             var args = {};
             this.searchGet = document.location.search.substring(1);
+            if (!this.searchGet.length) {
+                return false;
+            }
             this.searchItems = this.searchGet.split('&');
 
             this.searchItems.forEach(function (item, i) {
@@ -90,5 +93,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     app2.init();
 
-    // 31 min
+    // 51 min
+    // Строковые методы:
+    var strWrp = document.createElement('div');
+    var str = 'Объект массив функция';
+
+    // 1) split() - делит строку на подстроки по какому-либо разделителю, возвращает массив.
+    var splited = str.split(' ');
+    strWrp.innerHTML = splited + '</br>';
+    
+    // 2) join - склеивает массив по какому-либо соеденителю (создаёт новыую строку).
+    var joined = splited.join('</br>');
+    strWrp.innerHTML += joined + '</br>';
+
+    // 3) charAt() -  возвращает символ по указанной позиции
+    var chr = str.charAt(str.length - 1);
+    strWrp.innerHTML += chr + '</br>';
+
+    // 4) indexOf() || lastindexOf() - возвращает позицию искомого элемента в строке.
+    var iof = str.indexOf('ъ');
+    strWrp.innerHTML += iof + '</br>';
+
+    // 5) subsctring() - возвращает строку между двумя указанными индексами
+    var substring = str.substring(0, 6);
+    strWrp.innerHTML += substring + '</br>';
+
+    // 6) substr() - возвращает строку указанной длинный, начиная с указанного индекса
+    var substr = str.substr(7, str.length - 1);
+    strWrp.innerHTML += substr + '</br>';
+
+    // 7) toLowerCase() & toUpperCase();
+
+    document.body.appendChild(strWrp);
 });
